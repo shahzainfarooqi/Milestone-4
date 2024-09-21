@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="head">
+    <h1> Shahzain Editable Resume</h1>
+  </header>
+    <form id="resumeForm">
+        <section>
+            <h2>Personal Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+        </section>
+        
+        <section>
+            <h2>Work Experience</h2>
+            <div id="experienceSection">
+                <div class="experience">
+                    <label for="jobTitle">Job Title:</label>
+                    <input type="text" name="jobTitle" required><br>
+                    
+                    <label for="company">Company:</label>
+                    <input type="text" name="company" required><br>
+                    
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" name="startDate"><br>
+                    
+                    <label for="endDate">End Date:</label>
+                    <input type="date" name="endDate"><br>
+                    
+                    <textarea name="jobDescription" placeholder="Describe your role and responsibilities"></textarea><br>
+                </div>
+            </div>
+            <button type="button" onclick="addExperience()">Add More Experience</button>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div id="educationSection">
+                <div class="education">
+                    <label for="schoolName">School Name:</label>
+                    <input type="text" name="schoolName" required><br>
+                    
+                    <label for="degree">Degree:</label>
+                    <input type="text" name="degree" required><br>
+                    
+                    <label for="gradDate">Graduation Date:</label>
+                    <input type="date" name="gradDate"><br>
+                </div>
+            </div>
+            <button type="button" onclick="addEducation()">Add More Education</button>
+        </section>
+        
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resumePreview">
+        <h2>Resume Preview</h2>
+    </div>
+    <button id="downloadBtn" onclick="downloadPDF()" style="display:none;">Download as PDF</button>
+    
+    <script src="script.js"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</body>
+</html>

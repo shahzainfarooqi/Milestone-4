@@ -1,0 +1,59 @@
+body {
+  background-color: blue;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.head h1 {
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  color:aliceblue;
+}
+
+form,
+#resumePreview {
+  max-width: 600px;
+  margin: auto;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  margin-top: 10px;
+}
+
+input,
+textarea {
+  width: calc(100% - 110px);
+  margin-top: 10px;
+}
+
+textarea {
+  height: 60px;
+}
+
+section {
+  margin-top: 20px;
+}
+
+#resumePreview {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.editable {
+  border: 1px dashed #ccc;
+  padding: 5px;
+  cursor: text;
+}
+
+#downloadBtn {
+  display: block;
+  margin: 20px auto;
+}
+
+button {
+  background-color: darkred;
+  color: gold;
+}
